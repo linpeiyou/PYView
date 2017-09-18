@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CircleActivity"/>
+        <activity android:name=".circle.CircleActivity"/>
+        <activity android:name=".drip.DripActivity"/>
     </application>
 
 </manifest>

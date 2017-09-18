@@ -1,4 +1,4 @@
-package com.example.linpeiyou.pyview;
+package com.example.linpeiyou.pyview.circle;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,6 +9,9 @@ import android.icu.util.Measure;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.example.linpeiyou.pyview.R;
+
 
 /**
  * Created by linpeiyou on 2017/9/17.
