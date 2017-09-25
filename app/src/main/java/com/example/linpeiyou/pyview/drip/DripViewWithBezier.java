@@ -35,7 +35,7 @@ public class DripViewWithBezier extends View {
 
     private void init() {
         mPaint.setColor(mColor);
-        mPaint.setStrokeWidth(2);
+        mPaint.setStrokeWidth(10);
         mPaint.setStyle(Paint.Style.STROKE);
     }
 
@@ -45,13 +45,12 @@ public class DripViewWithBezier extends View {
         super.onDraw(canvas);
         int width = canvas.getWidth();
         int height = canvas.getHeight();
+
         Path path = new Path();
-        //path.moveTo(200,700);
-        //path.quadTo(50,900,200,910);
-        //path.quadTo(350,900,200,700);
-        path.moveTo(width / 2, 0);
-        path.quadTo(width - 150, height + 200, width / 2, height);
-        path.quadTo(width + 150, height + 200, width / 2, 0);
+        canvas.translate(width / 2, height);
+        canvas.rotate(-45);
+        //path.lineTo(100, -100);
+        path.addCircle(100, -100, 1000, Path.Direction.CCW);
         canvas.drawPath(path, mPaint);
     }
 }

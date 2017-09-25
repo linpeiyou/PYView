@@ -8,11 +8,13 @@ import android.widget.Button;
 
 import com.example.linpeiyou.pyview.circle.CircleActivity;
 import com.example.linpeiyou.pyview.drip.DripActivity;
+import com.example.linpeiyou.pyview.freestyle.CanvasTranslateActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnCircle;
     Button btnDrip;
+    Button btnCanvasTranslate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private void findView() {
         btnCircle = (Button) findViewById(R.id.btn_circle);
         btnDrip = (Button) findViewById(R.id.btn_drip);
+        btnCanvasTranslate = (Button) findViewById(R.id.btn_canvas_translate);
     }
 
     private void initView() {
@@ -40,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DripActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnCanvasTranslate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CanvasTranslateActivity.class);
                 startActivity(intent);
             }
         });

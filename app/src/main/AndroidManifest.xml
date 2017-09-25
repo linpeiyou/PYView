@@ -19,6 +19,7 @@
 
         <activity android:name=".circle.CircleActivity"/>
         <activity android:name=".drip.DripActivity"/>
+        <activity android:name=".freestyle.CanvasTranslateActivity"/>
     </application>
 
 </manifest>
